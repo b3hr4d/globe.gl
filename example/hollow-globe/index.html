@@ -1,29 +1,40 @@
 <head>
-  <style> body { margin: 0; } </style>
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
 
   <script src="//unpkg.com/three"></script>
   <script src="//unpkg.com/topojson-client"></script>
 
-  <script src="//unpkg.com/globe.gl"></script>
-<!--  <script src="../../dist/globe.gl.js"></script>-->
+  <script src="//unpkg.com/globe.gl-fork"></script>
+  <!--  <script src="../../dist/globe.gl-fork.js"></script>-->
 </head>
 
 <body>
   <div id="globeViz"></div>
 
   <script>
-    const world = Globe()
-      (document.getElementById('globeViz'))
-      .backgroundColor('rgba(0,0,0,0)')
+    const world = Globe()(document.getElementById("globeViz"))
+      .backgroundColor("rgba(0,0,0,0)")
       .showGlobe(false)
-      .showAtmosphere(false);
+      .showAtmosphere(false)
 
-    fetch('//unpkg.com/world-atlas/land-110m.json').then(res => res.json())
-      .then(landTopo => {
+    fetch("//unpkg.com/world-atlas/land-110m.json")
+      .then((res) => res.json())
+      .then((landTopo) => {
         world
-          .polygonsData(topojson.feature(landTopo, landTopo.objects.land).features)
-          .polygonCapMaterial(new THREE.MeshLambertMaterial({ color: 'darkslategrey', side: THREE.DoubleSide }))
-          .polygonSideColor(() => 'rgba(0,0,0,0)');
-      });
+          .polygonsData(
+            topojson.feature(landTopo, landTopo.objects.land).features
+          )
+          .polygonCapMaterial(
+            new THREE.MeshLambertMaterial({
+              color: "darkslategrey",
+              side: THREE.DoubleSide,
+            })
+          )
+          .polygonSideColor(() => "rgba(0,0,0,0)")
+      })
   </script>
 </body>

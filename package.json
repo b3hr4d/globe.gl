@@ -1,18 +1,18 @@
 {
-  "name": "globe.gl",
+  "name": "globe.gl-fork",
   "version": "2.26.6",
   "description": "UI component for Globe Data Visualization using ThreeJS/WebGL",
-  "unpkg": "dist/globe.gl.min.js",
-  "jsdelivr": "dist/globe.gl.min.js",
-  "main": "dist/globe.gl.common.js",
-  "module": "dist/globe.gl.module.js",
-  "types": "dist/globe.gl.d.ts",
+  "unpkg": "dist/globe.gl-fork.min.js",
+  "jsdelivr": "dist/globe.gl-fork.min.js",
+  "main": "dist/globe.gl-fork.common.js",
+  "module": "dist/globe.gl-fork.module.js",
+  "types": "dist/globe.gl-fork.d.ts",
   "sideEffects": [
     "./src/*.css"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vasturiano/globe.gl.git"
+    "url": "git+https://github.com/vasturiano/globe.gl-fork.git"
   },
   "keywords": [
     "webgl",
@@ -29,9 +29,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vasturiano/globe.gl/issues"
+    "url": "https://github.com/vasturiano/globe.gl-fork/issues"
   },
-  "homepage": "https://github.com/vasturiano/globe.gl",
+  "homepage": "https://github.com/vasturiano/globe.gl-fork",
   "scripts": {
     "build": "rimraf dist && rollup -c",
     "dev": "rollup -w -c rollup.config.dev.js",
@@ -46,8 +46,8 @@
     "accessor-fn": "1",
     "kapsule": "^1.13",
     "three": ">=0.118 <1",
-    "three-globe": "^2.24",
-    "three-render-objects": "^1.27"
+    "three-globe-fork": "^2.24",
+    "three-render-objects-fork": "^1.27.8"
   },
   "devDependencies": {
     "@babel/core": "^7.19.1",
